@@ -1,0 +1,20 @@
+body{
+    background: #27F5B0;
+}
+
+div{
+    background:#F54927 ;
+    /*border:#F5B027 ;
+    border-width: thick;
+    border-style: dotted;*/
+    border: #F5B027 10px solid
+}
+
+p{
+    color: #F5B027;
+}
+
+span{
+    background:#76DB12 ;
+    color:#DB1212
+}
