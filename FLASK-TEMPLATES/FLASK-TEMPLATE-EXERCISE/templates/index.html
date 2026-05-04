@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div style="max-width: 500px; margin: 60px auto; font-family: Arial, sans-serif; text-align: center;">
+
+
+<h1 style="margin-bottom: 10px;">Puppy Username Check</h1>
+<p style="color: #555;">Check if your username is secure</p>
+
+<div style="text-align: left; margin: 20px 0;">
+    <p><strong>Requirements:</strong></p>
+    <ul style="padding-left: 20px;">
+        <li>At least one uppercase letter</li>
+        <li>At least one lowercase letter</li>
+        <li>Must end with a number</li>
+    </ul>
+</div>
+
+<form action="{{ url_for('report') }}" method="POST">
+    <input 
+        type="text" 
+        name="username" 
+        placeholder="Enter username"
+        style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 6px;",
+        required
+    >
+
+    <button 
+        type="submit"
+        style="width: 100%; padding: 10px; border: none; background-color: #222; color: white; border-radius: 6px; cursor: pointer;"
+    >
+        Submit
+    </button>
+</form>
+
+
+</div>
+{% endblock %}

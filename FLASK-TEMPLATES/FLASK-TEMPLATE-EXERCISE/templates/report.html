@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div style="max-width: 500px; margin: 60px auto; font-family: Arial, sans-serif; text-align: center;">
+
+<p style="color: #555;">Let's see how you performed</p>
+
+{% if secure %}
+    <div style="margin-top: 20px; padding: 15px; border-radius: 8px; background-color: #f4f4f4;">
+        <p style="margin: 0; font-weight: bold;">✅ Your username passed all requirements</p>
+    </div>
+{% else %}
+    <div style="margin-top: 20px; padding: 15px; border-radius: 8px; background-color: #f9f9f9;">
+        <p style="margin-bottom: 10px; font-weight: bold;">❌ Issues found:</p>
+
+        <ul style="text-align: left; padding-left: 20px; color: #333;">
+            {% if not caseNumber %}
+                <li>Must end with a number</li>
+            {% endif %}
+
+            {% if not caseUpper %}
+                <li>Must include an uppercase letter</li>
+            {% endif %}
+
+            {% if not caseLower %}
+                <li>Must include a lowercase letter</li>
+            {% endif %}
+        </ul>
+    </div>
+{% endif %}
+
+
+</div>
+{% endblock %}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Website</h1>
+    
+    <ul>
+        {% for item in mylist %}
+            <li>{{item}}</li>
+        {% endfor %}
+    </ul>
+
+    {% if 'Rufus' in puppies %}
+        <p>Found you Rufus!</p>
+    {% else %}
+        <p>Hmm. Rufus is not in this list!</p>
+    {% endif %}
+    
+
+</body>
+</html>
