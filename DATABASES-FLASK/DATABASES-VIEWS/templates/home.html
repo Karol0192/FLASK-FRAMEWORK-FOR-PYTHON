@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+
+<!-- Header -->
+<div class="home-header">
+    <h2>🐾 Adopta</h2>
+    <p>Encuentra o da hogar</p>
+</div>
+
+<!-- Opciones -->
+<div class="home-menu">
+
+    <a href="{{url_for('list_pup')}}" class="item">
+        <span>Perros</span>
+        <span class="arrow">→</span>
+    </a>
+
+    <a href="{{url_for('add_pup')}}" class="item">
+        <span>Agregar</span>
+        <span class="arrow">→</span>
+    </a>
+
+    <a href="{{url_for('del_pup')}}" class="item danger">
+        <span>Eliminar</span>
+        <span class="arrow">→</span>
+    </a>
+
+</div>
+
+{% endblock %}
