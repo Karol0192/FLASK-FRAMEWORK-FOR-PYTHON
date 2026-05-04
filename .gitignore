@@ -1,0 +1,23 @@
+# Entornos Virtuales
+venv/
+.env/
+.env
+.env.*
+
+# Python
+__pycache__/
+*.pyc 
+*.pyo
+
+# VSCode
+.vscode/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db 
+
+# Variables Sensibles
+*.env
+
+# Migraciones Flask-Migrate
+migrations/
