@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Agregar{% endblock %}
+
+{% block content %}
+
+<h4 class="mb-4">Agregar cachorro</h4>
+
+<form method="POST">
+    {{ form.hidden_tag() }}
+
+    {{ form.name.label }}
+    {{ form.name() }}
+
+    {% for error in form.name.errors %}
+        <div class="error">{{ error }}</div>
+    {% endfor %}
+
+    {{ form.submit(class="btn-minimal") }}
+</form>
+
+{% endblock %}

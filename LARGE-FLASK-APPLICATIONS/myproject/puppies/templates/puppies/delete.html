@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Eliminar{% endblock %}
+
+{% block content %}
+
+<h4 class="mb-4">Eliminar cachorro</h4>
+
+<form method="POST">
+    {{ form.hidden_tag() }}
+
+    {{ form.id.label }}
+    {{ form.id() }}
+
+    {% for error in form.id.errors %}
+        <div class="error">{{ error }}</div>
+    {% endfor %}
+
+    {{ form.submit(class="btn-minimal") }}
+</form>
+
+{% endblock %}
