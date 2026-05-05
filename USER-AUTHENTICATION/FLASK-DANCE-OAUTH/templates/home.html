@@ -1,0 +1,11 @@
+<h1>Home Page</h1>
+
+<a href="{{ url_for('welcome') }}">Welcome Page Here</a>
+
+{% if not google.authorized %}
+    <a href="{{ url_for('google.login') }}">
+        Login with Google
+    </a>
+{% else %}
+    <p>You are logged in ✅</p>
+{% endif %}

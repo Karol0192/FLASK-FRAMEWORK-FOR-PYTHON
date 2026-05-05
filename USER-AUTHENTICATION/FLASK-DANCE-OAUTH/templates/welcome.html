@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+</head>
+<body>
+
+    <h1>Welcome Google User</h1>
+
+    <h2>Your email: {{ email }}</h2>
+
+    <h3>{{ name }}</h3>
+
+    {% if picture %}
+        <img src="{{ picture }}" alt="Profile Picture" width="150" style="border-radius:50%;">
+    {% endif %}
+
+</body>
+</html>
