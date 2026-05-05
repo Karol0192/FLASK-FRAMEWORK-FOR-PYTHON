@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}Iniciar sesión{% endblock %}
+{% block content %}
+  {% if current_user.is_authenticated %}
+  <p>Bienvenido, {{ current_user.username }}!</p>
+  {% else %}
+  <p>Por favor, <a href="{{ url_for('login') }}">inicia sesión</a> o <a href="{{ url_for('register') }}">regístrate</a>.</p>
+  {% endif %}
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}Registrarse{% endblock %}
+
+{% block content %}
+<div class="form-container">
+  <h1>Crear cuenta</h1>
+
+  <form method="POST" novalidate>
+    {{ form.hidden_tag() }}
+
+    <div class="form-group">
+      {{ form.email.label }}
+      {{ form.email(class="form-control", placeholder="tu@correo.com") }}
+      {% for error in form.email.errors %}
+        <span class="error">{{ error }}</span>
+      {% endfor %}
+    </div>
+
+    <div class="form-group">
+      {{ form.username.label }}
+      {{ form.username(class="form-control", placeholder="usuario123") }}
+      {% for error in form.username.errors %}
+        <span class="error">{{ error }}</span>
+      {% endfor %}
+    </div>
+
+    <div class="form-group">
+      {{ form.password.label }}
+      {{ form.password(class="form-control", placeholder="••••••••") }}
+      {% for error in form.password.errors %}
+        <span class="error">{{ error }}</span>
+      {% endfor %}
+    </div>
+
+    <div class="form-group">
+      {{ form.pass_confirm.label }}
+      {{ form.pass_confirm(class="form-control", placeholder="Repite la contraseña") }}
+      {% for error in form.pass_confirm.errors %}
+        <span class="error">{{ error }}</span>
+      {% endfor %}
+    </div>
+
+    {{ form.submit(class="btn-submit") }}
+  </form>
+
+  <p class="form-footer">
+    ¿Ya tienes cuenta? <a href="{{ url_for('login') }}">Inicia sesión</a>
+  </p>
+</div>
+{% endblock %}
