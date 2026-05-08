@@ -1,25 +1,166 @@
-.tabla {
-    width: 100%;
+.tabla{
+    width: 700px;
+    margin: 40px auto;
+
     border-collapse: collapse;
-    margin-top: 20px;
+    table-layout: fixed;
+
+    font-family: Arial, sans-serif;
 }
 
-.tabla th {
+.tabla th{
+    text-align: left;
+    padding: 12px;
+
+    border-bottom: 2px solid #ddd;
+    font-size: 14px;
+}
+
+.tabla td{
+    padding: 10px;
+
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.tabla tr:hover{
+    background: #f8f8f8;
+}
+
+h1{
+    text-align: center;
+
+    font-family: Arial, sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+
+    margin-top: 40px;
+    margin-bottom: 10px;
+
+    color: #222;
+}
+
+p{
+    text-align: center;
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+
+    color: #777;
+
+    margin-bottom: 30px;
+}
+
+.formulario{
+    width: 90%;
+    max-width: 400px;
+
+    margin: 50px auto;
+    padding: 30px;
+
+    background: white;
+
+    border-radius: 10px;
+
+    box-shadow: 0 2px 10px rgba(0,0,0,.05);
+
+    font-family: Arial, sans-serif;
+}
+
+.formulario h1{
+    text-align: center;
+
+    margin-bottom: 25px;
+
+    font-size: 28px;
+    font-weight: 600;
+
+    color: #222;
+}
+
+.formulario label{
+    display: block;
+
+    margin-bottom: 8px;
+    margin-top: 15px;
+
+    font-size: 14px;
+
+    color: #555;
+}
+
+.formulario input[type="text"]{
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #ddd;
+    border-radius: 6px;
+
+    font-size: 14px;
+
+    outline: none;
+
+    box-sizing: border-box;
+}
+
+.formulario input[type="text"]:focus{
+    border-color: #2563eb;
+}
+
+.formulario input[type="submit"]{
+    width: 100%;
+
+    margin-top: 25px;
+    padding: 12px;
+
+    border: none;
+    border-radius: 6px;
+
     background: #2563eb;
     color: white;
-    padding: 12px;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition: .3s;
 }
 
-.tabla td {
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
+.formulario input[type="submit"]:hover{
+    background: #1d4ed8;
 }
 
-.tabla tr:hover {
-    background: #f5f5f5;
+.contenedor-boton{
+    width: 90%;
+    max-width: 700px;
+
+    margin: 20px auto;
+
+    display: flex;
+    justify-content: flex-end;
 }
 
-.tabla a {
+.btn-agregar{
     text-decoration: none;
-    margin-right: 10px;
+
+    background: #2563eb;
+    color: white;
+
+    padding: 10px 18px;
+
+    border-radius: 6px;
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+
+    transition: .3s;
+}
+
+.btn-agregar:hover{
+    background: #1d4ed8;
 }

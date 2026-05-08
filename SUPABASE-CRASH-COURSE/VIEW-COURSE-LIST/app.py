@@ -54,5 +54,24 @@ def editar(id):
     
     return render_template('editar.html',curso=curso)
 
+@app.route('/registrar',methods=['GET','POST'])
+def registrar():
+
+    if request.method == 'POST':
+        
+        nombre = request.form['nombre']
+        instructor = request.form['instructor']
+        topico = request.form['topico']
+
+        supabase.table('cursos').insert({
+            'nombre':nombre.title(),
+            'instructor':instructor.title(),
+            'topico':topico.title()
+        }).execute()
+
+        return redirect(url_for('index'))
+
+    return render_template('registrar.html')
+
 if __name__ == '__main__':
     app.run(debug=True)

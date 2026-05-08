@@ -2,16 +2,16 @@
 
 {% block content %}
     <form class="formulario"
-        action="{{url_for('editar',id=curso['id'])}}" 
+        action="{{url_for('registrar')}}" 
         method="post">
         <label for="nombre">Nombre</label>
-        <input type="text" name="nombre" value="{{curso['nombre']}}">
+        <input type="text" name="nombre" placeholder="Nombre" required>
         <br>
         <label for="instructor">Instructor</label>
-        <input type="text" name="instructor" value="{{curso['instructor']}}">
+        <input type="text" name="instructor" placeholder="Instructor" required>
         <br>
         <label for="topico">Topico</label>
-        <input type="text" name="topico" value="{{curso['topico']}}">
+        <input type="text" name="topico" placeholder="Topico" required>
         <br>
         <input type="submit" value="Enviar">
     </form>

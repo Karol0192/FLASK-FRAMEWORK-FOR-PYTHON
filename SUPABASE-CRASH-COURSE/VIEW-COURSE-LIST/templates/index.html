@@ -4,7 +4,14 @@
     <h1>Listado de Cursos</h1>
 
     <p>Cantidad Cursos:{{cantidad_cursos}}</p>
-    <table>
+
+    <div class="contenedor-boton">
+        <a href="{{url_for('registrar')}}" class="btn-agregar">
+            Agregar Curso
+        </a>
+    </div>
+
+    <table class="tabla">
         <thead>
             <tr>
             <th>Id</th>
