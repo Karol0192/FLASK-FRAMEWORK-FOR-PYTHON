@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Listado de Cursos</h1>
+
+    <p>Cantidad Cursos:{{cantidad_cursos}}</p>
+    <table>
+        <thead>
+            <tr>
+            <th>Id</th>
+            <th>Curso</th>
+            <th>Detalle</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for dic in cursos %}
+                <tr>
+                <td>{{dic['id']}}</td>
+                <td>{{dic['nombre']}}</td>
+                <td>
+                    <a href="/editar/{{dic['id']}}">Editar</a>
+                    <a href="/detalle/{{dic['id']}}">Ver</a>
+                </td>
+            </tr>
+            {% endfor %}
+            
+        </tbody>
+    </table>
+{% endblock %}
