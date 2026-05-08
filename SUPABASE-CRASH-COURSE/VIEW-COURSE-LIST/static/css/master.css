@@ -1,0 +1,25 @@
+.tabla {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.tabla th {
+    background: #2563eb;
+    color: white;
+    padding: 12px;
+}
+
+.tabla td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.tabla tr:hover {
+    background: #f5f5f5;
+}
+
+.tabla a {
+    text-decoration: none;
+    margin-right: 10px;
+}

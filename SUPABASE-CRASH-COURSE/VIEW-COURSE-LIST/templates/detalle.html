@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Detalle Curso {{curso['nombre']}}</h1>
+
+    <table>
+        <thead>
+            <tr>
+            <th>Nombre</th>
+            <th>Instructor</th>
+            <th>Topico</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{curso['nombre']}}</td>
+                <td>{{curso['instructor']}}</td>
+                <td>{{curso['topico']}}</td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}
